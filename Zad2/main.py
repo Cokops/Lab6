@@ -34,7 +34,7 @@ def toggle_task(task_id: int):
         if task["id"] == task_id:
             task["done"] = not task["done"]
             return task
-        return HTMLResponse(status_code=404,content="Не найдено!")
+    return HTMLResponse(status_code=404,content="Не найдено!")
 
 @app.delete("/tasks/{task_id}")
 def delete_task(task_id: int):
