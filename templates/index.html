@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица языков</title>
+    <style>
+        body { font-family: Arial; padding: 30px; }
+        .box { max-width: 600px; margin: auto; background: white; 
+               padding: 25px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        h1 { text-align: center; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th { background: #4CAF50; color: white; padding: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #ddd; }
+        tr:hover { background: #f5f5f5; }
+        .count { text-align: center; margin-top: 20px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🗣️ Языки мира</h1>
+        <table>
+            <tr><th>№</th><th>Язык</th><th>Привет</th></tr>
+            
+            {% for lang in langs %}
+            <tr>
+                <td>{{ lang.id }}</td>
+                <td><b>{{ lang.name }}</b></td>
+                <td style="color: green; font-size: 18px;"><b>{{ lang.hello }}</b></td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        <div class="count">
+            Всего языков: <b>{{ langs|length }}</b>
+        </div>
+    </div>
+</body>
+</html>
