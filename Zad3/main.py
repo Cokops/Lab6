@@ -2,8 +2,8 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
 from typing import List
-import models
-from database import engine, get_db, SessionLocal
+from . import models
+from .database import engine, get_db
 from pydantic import BaseModel
 from typing import Optional
 
