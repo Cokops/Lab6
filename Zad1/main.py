@@ -5,9 +5,8 @@ from pathlib import Path
 import uvicorn
 
 app = FastAPI()
-# Получаем абсолютный путь к директории со скриптом
+
 BASE_DIR = Path(__file__).parent
-# Указываем абсолютный путь к папке templates
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 languages = [
