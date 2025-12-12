@@ -2,12 +2,12 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from sqlalchemy.orm import Session
 from typing import List
-from . import models
-from .database import engine, get_db
+import models
+from database import engine, get_db, SessionLocal
 from pydantic import BaseModel
 from typing import Optional
 
-###models.Base.metadata.create_all(bind=engine)
+#models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
